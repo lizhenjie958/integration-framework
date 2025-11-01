@@ -1,7 +1,0 @@
-com.jie.verify.spi.DemoDao=\
-com.jie.verify.spring.spi.DemoMysqlDaoImpl,\
-com.jie.verify.spring.spi.DemoOracleDaoImpl
-org.springframework.boot.SpringApplicationRunListener=\
-com.jie.verify.spring.listener.apprun.VerifySpringApplicationRunListener
-org.springframework.context.ApplicationContextInitializer=\
-com.jie.verify.spring.context.VerifyApplicationContextInitializer
