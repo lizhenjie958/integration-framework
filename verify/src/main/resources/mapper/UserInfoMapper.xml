@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jie.verify.mybatis.mapper.UserInfoMapper">
+  <resultMap id="BaseResultMap" type="com.jie.verify.mybatis.model.UserInfoDO">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="id_number" jdbcType="VARCHAR" property="idNumber" />
+    <result column="wx_open_id" jdbcType="VARCHAR" property="wxOpenId" />
+    <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="registerTime" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+    <result column="user_data_json" jdbcType="VARCHAR" property="userDataDO" typeHandler="com.jie.verify.mybatis.handler.UserDataJsonTypeHandler"/>
+    <result column="user_config_json" jdbcType="VARCHAR" property="userConfigDataDO" typeHandler="com.jie.verify.mybatis.handler.UserConfigJsonTypeHandler"/>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, user_id, user_name, phone, id_number, wx_open_id, last_login_time, register_time, status,
+    gmt_create, gmt_modify, user_data_json, user_config_json
+  </sql>
+
+  <select id="selectOneByPhone" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from qx_user_info
+    where phone = #{phone,jdbcType=VARCHAR}
+  </select>
+
+</mapper>
