@@ -1,4 +1,4 @@
-package com.jie.bean;
+package com.jie.sparksql.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

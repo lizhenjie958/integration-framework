@@ -1,6 +1,6 @@
-package com.jie.core;
+package com.jie.sparksql.core;
 
-import com.jie.bean.User;
+import com.jie.sparksql.bean.User;
 import org.apache.spark.SparkConf;
 import org.apache.spark.sql.*;
 

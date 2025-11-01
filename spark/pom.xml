@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>spark</artifactId>
+    <packaging>pom</packaging>
 
     <modules>
         <module>spark-core</module>

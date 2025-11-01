@@ -1,4 +1,4 @@
-package com.jie.serialize;
+package com.jie.sparkcore.serialize;
 
 import java.io.Serializable;
 

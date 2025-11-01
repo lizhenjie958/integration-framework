@@ -1,4 +1,4 @@
-package com.jie.partitioner;
+package com.jie.sparkcore.partitioner;
 
 import org.apache.spark.Partitioner;
 import org.apache.spark.SparkConf;

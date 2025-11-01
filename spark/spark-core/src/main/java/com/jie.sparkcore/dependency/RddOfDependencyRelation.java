@@ -1,4 +1,4 @@
-package com.jie.dependency;
+package com.jie.sparkcore.dependency;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;

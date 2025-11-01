@@ -1,4 +1,4 @@
-package com.jie.base;
+package com.jie.sparkcore.base;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;

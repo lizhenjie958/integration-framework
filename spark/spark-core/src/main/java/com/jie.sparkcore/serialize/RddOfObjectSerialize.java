@@ -1,4 +1,4 @@
-package com.jie.serialize;
+package com.jie.sparkcore.serialize;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;

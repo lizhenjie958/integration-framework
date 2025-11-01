@@ -1,4 +1,4 @@
-package com.jie.serialize;
+package com.jie.sparkcore.serialize;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
@@ -17,7 +17,7 @@ public class RddOfKryoSerialize {
                 // 替换默认的序列化机制
                 .set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
                 // 注册需要使用kryo序列化的自定义类
-                .registerKryoClasses(new Class[]{Class.forName("com.jie.serialize.User")});
+                .registerKryoClasses(new Class[]{Class.forName("com.jie.sparkcore.serialize.User")});
 
         // 2. 创建sparkContext
         JavaSparkContext sc = new JavaSparkContext(conf);

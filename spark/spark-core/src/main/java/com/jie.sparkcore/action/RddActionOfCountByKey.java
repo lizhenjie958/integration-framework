@@ -1,4 +1,4 @@
-package com.jie.action;
+package com.jie.sparkcore.action;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;

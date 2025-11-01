@@ -1,4 +1,4 @@
-package com.jie.broadcast;
+package com.jie.sparkcore.broadcast;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;

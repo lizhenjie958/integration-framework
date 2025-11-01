@@ -1,4 +1,4 @@
-package com.jie.cache;
+package com.jie.sparkcore.cache;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;

@@ -1,4 +1,4 @@
-package com.jie.medium;
+package com.jie.sparkcore.medium;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
