@@ -1,4 +1,4 @@
-package com.jie.flink;
+package com.jie.flink.simple;
 
 import lombok.SneakyThrows;
 import org.apache.flink.api.common.functions.FlatMapFunction;
