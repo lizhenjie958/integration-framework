@@ -13,8 +13,8 @@ public class TransMap {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment executionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment();
         DataStreamSource<WaterSensor> lineDS = executionEnvironment.fromElements(
-                new WaterSensor("sensor_1", 1, 1),
-                new WaterSensor("sensor_2", 2, 2)
+                new WaterSensor("sensor_1", 1L, 1),
+                new WaterSensor("sensor_2", 2L, 2)
         );
         lineDS.map(new MapFunction<WaterSensor, String>() {
             @Override

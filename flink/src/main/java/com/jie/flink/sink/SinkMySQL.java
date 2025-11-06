@@ -43,8 +43,8 @@ public class SinkMySQL {
                     public void accept(PreparedStatement preparedStatement, WaterSensor waterSensor) throws SQLException {
                         //每收到一条WaterSensor，如何去填充占位符
                         preparedStatement.setString(1, waterSensor.getId());
-                        preparedStatement.setInt(2, waterSensor.getTs());
-                        preparedStatement.setInt(3, waterSensor.getVc());
+                        preparedStatement.setLong(2, waterSensor.getTs());
+                        preparedStatement.setLong(3, waterSensor.getVc());
 
                     }
                 }, JdbcExecutionOptions.builder()

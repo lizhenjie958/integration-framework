@@ -13,6 +13,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class WaterSensor {
     private String id;
-    private Integer ts;
+    private Long ts;
     private Integer vc;
 }

@@ -15,11 +15,11 @@ public class TransKeyBy {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment environment = StreamExecutionEnvironment.getExecutionEnvironment();
         DataStreamSource<WaterSensor> lineDS = environment.fromElements(
-                new WaterSensor("sensor_1", 1, 1),
-                new WaterSensor("sensor_1", 2, 2),
-                new WaterSensor("sensor_2", 3, 3),
-                new WaterSensor("sensor_2", 4, 4),
-                new WaterSensor("sensor_2", 5, 5)
+                new WaterSensor("sensor_1", 1L, 1),
+                new WaterSensor("sensor_1", 2L, 2),
+                new WaterSensor("sensor_2", 3L, 3),
+                new WaterSensor("sensor_2", 4L, 4),
+                new WaterSensor("sensor_2", 5L, 5)
         );
 
         KeyedStream<WaterSensor, String> keyStream = lineDS.keyBy(WaterSensor::getId);

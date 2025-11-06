@@ -15,10 +15,10 @@ public class SimpleAggregation {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment environment = StreamExecutionEnvironment.getExecutionEnvironment();
         DataStreamSource<WaterSensor> stream = environment.fromElements(
-                new WaterSensor("sensor_1", 1, 1),
-                new WaterSensor("sensor_1", 2, 2),
-                new WaterSensor("sensor_2", 2, 2),
-                new WaterSensor("sensor_3", 3, 3)
+                new WaterSensor("sensor_1", 1L, 1),
+                new WaterSensor("sensor_1", 2L, 2),
+                new WaterSensor("sensor_2", 2L, 2),
+                new WaterSensor("sensor_3", 3L, 3)
         );
 
         SingleOutputStreamOperator<WaterSensor> vcMax = stream.keyBy(WaterSensor::getId).max("vc");

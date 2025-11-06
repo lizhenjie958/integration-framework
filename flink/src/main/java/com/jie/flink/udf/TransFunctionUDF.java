@@ -14,11 +14,10 @@ public class TransFunctionUDF {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         DataStreamSource<WaterSensor> stream = env.fromElements(
-
-                new WaterSensor("sensor_1", 1, 1),
-                new WaterSensor("sensor_1", 2, 2),
-                new WaterSensor("sensor_2", 2, 2),
-                new WaterSensor("sensor_3", 3, 3)
+                new WaterSensor("sensor_1", 1L, 1),
+                new WaterSensor("sensor_1", 2L, 2),
+                new WaterSensor("sensor_2", 2L, 2),
+                new WaterSensor("sensor_3", 3L, 3)
         );
 
         SingleOutputStreamOperator<WaterSensor> filter = stream.filter(sensor -> "sensor_1".equals(sensor.getId()));

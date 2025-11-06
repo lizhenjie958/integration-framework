@@ -15,7 +15,7 @@ public class UseReduceFunction {
         environment.socketTextStream("127.0.0.1",9999)
                 .map(line ->{
                     String[] split = line.split(",");
-                    return new WaterSensor(split[0],Integer.parseInt(split[1]),Integer.parseInt(split[2]));
+                    return new WaterSensor(split[0],Long.parseLong(split[1]),Integer.parseInt(split[2]));
                 })
                 .keyBy(WaterSensor::getId)
                 .reduce((value1, value2) -> {
