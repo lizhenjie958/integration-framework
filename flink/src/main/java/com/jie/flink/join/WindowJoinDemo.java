@@ -72,6 +72,8 @@ public class WindowJoinDemo {
                     }
                 });
 
+        // "c" 在 ds1 中属于窗口 [0, 10000)
+        // "c" 在 ds2 中属于窗口 [10000, 20000)
         join.print();
 
         env.execute();
