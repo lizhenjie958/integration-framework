@@ -25,8 +25,8 @@ public class WindowReduceDemo {
                 .keyBy(r -> r.getId())
                 // 设置滚动事件时间窗口
                 .window(TumblingProcessingTimeWindows.of(Time.seconds(10)))
+                // 增量聚合reduce，输入输出类型必须一致
                 .reduce(new ReduceFunction<WaterSensor>() {
-
                     @Override
                     public WaterSensor reduce(WaterSensor value1, WaterSensor value2) throws Exception {
                         System.out.println("调用reduce方法，之前的结果:"+value1 + ",现在来的数据:"+value2);
